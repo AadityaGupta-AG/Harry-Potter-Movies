@@ -1,0 +1,28 @@
+<main>
+  <section class="filters-container">
+    <h4>Filters</h4>
+    <div class="filters">
+      Title <input type="text" placeholder="Search by Title"
+        [ngModel]="searchTitle()"
+        (ngModelChange)="searchTitle.set($event)"/>
+      Release year <input type="number" placeholder="Filter by Release Date"
+        [ngModel]="searchYear()"
+        (ngModelChange)="searchYear.set($event)"/>
+    </div>
+  </section>
+  <section>
+    <ul>
+      <li *ngFor="let movie of filteredMovies()">
+        <div class="movie-card">
+          <div>
+            <h4>{{ movie.title }}</h4>
+            <span>Release Date: {{ movie.release_date }}</span>
+            <span>Budget: {{ movie.budget | million }}</span>
+            <span>Duration: {{ +movie.duration | duration }}</span>
+          </div>
+          <button [id]="movie.id" (click)="onDetails(movie.id)">Details</button>
+        </div>
+      </li>
+    </ul>
+  </section>
+</main>

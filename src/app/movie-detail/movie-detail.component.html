@@ -1,0 +1,36 @@
+<article>
+  <button (click)="onBack()">Back</button>
+  <div *ngIf="movieDetails() as movie">
+    <h1>{{ movie.title }}</h1>
+    <div class="movie-description">
+      <img class="movie-poster" [src]="movie.poster" alt="{{'Movie Poster - '+movie.title}}">
+      <p class="movie-summary"><strong>Summary:</strong> {{ movie.summary }}</p>
+    </div>
+
+    <section class="details-table">
+      <h3>Details</h3>
+      <table class="horizontal">
+        <thead>
+          <tr>
+            <th>Box Office</th>
+            <th>Budget</th>
+            <th>Duration</th>
+            <th>Producers</th>
+            <th>Cinematographers</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ movie.box_office | million }}</td>
+            <td>{{ movie.budget | million }}</td>
+            <td>{{ +movie.duration | duration }}</td>
+            <td>{{ movie.producers.join(', ') }}</td>
+            <td>{{ movie.cinematographers.join(', ') }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+</article>
+
+

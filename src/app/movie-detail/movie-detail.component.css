@@ -1,0 +1,44 @@
+article {
+  margin: 0 auto;
+  width: 800px;
+}
+
+.movie-description {
+  display: flex;
+}
+
+.movie-poster {
+  height: 320px;
+  min-width: 240px;
+}
+.movie-summary {
+  font-size: 15px;
+}
+
+.details-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+table {
+  --table-border-color: #d6dbe5;
+  --table-head-back-color: #e5e9f0;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th {
+  border-right: 2px solid #b9bdc8 !important;
+}
+td {
+  background-color: #eceff4;
+}
+
+td, th {
+  padding: 10px;
+  font-size: 14px;
+  text-align: left;
+  border-bottom: 2px solid #d6dbe5 !important;
+}

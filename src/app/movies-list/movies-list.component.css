@@ -1,0 +1,65 @@
+main {
+  margin: 0 auto;
+  width: 800px;
+}
+
+.filters-container {
+  background-color: #e5e9f0;
+  margin-top: -10px;
+  padding: 40px 10px 20px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  align-items: center;
+  padding: 4px 10px;
+}
+
+.filters input {
+  padding: 8px;
+  width: 200px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  font-size: 12px;
+  outline: none;
+}
+.filters input:focus,
+.filters input:hover {
+  border: 2px solid #333;
+}
+
+ul {
+  list-style: disc;
+  padding: 20px;
+  margin: 0;
+}
+
+li {
+  padding: 4px;
+}
+
+li .movie-card {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+li h4 {
+  margin: 0;
+  color: #333;
+  margin-top: 12px;
+  line-height: 6px;
+}
+
+li span {
+  margin: 5px 0 0;
+  color: #666;
+  font-size: 11px;
+  margin-right: 12px;
+}
+
+button {
+  margin: 0;
+}
