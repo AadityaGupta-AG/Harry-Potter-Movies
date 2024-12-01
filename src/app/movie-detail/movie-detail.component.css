@@ -8,8 +8,11 @@ article {
 }
 
 .movie-poster {
-  height: 320px;
-  min-width: 240px;
+  height: 300px;
+  /* min-width: 240px; */
+  border-radius: 4px;
+  margin: 20px;
+  box-shadow: 2px 2px 12px #333;
 }
 .movie-summary {
   font-size: 15px;
